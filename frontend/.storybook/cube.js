@@ -1,0 +1,2 @@
+//module "cube.js"
+
