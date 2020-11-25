@@ -3,8 +3,9 @@ import { action } from '@storybook/addon-actions';
 import { Button } from '@storybook/react/demo';
 
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, number, color, backgroundColor} from '@storybook/addon-knobs';
 
+import { button } from '@storybook/addon-knobs';
 
 
 //ONGLET BUTTON
@@ -22,9 +23,9 @@ export const emoji = () => (
   </Button>
 );
 
-export const primary = () => (
-  <Button id="input" background="#65C7F0" onClick={action('clicked')}>change</Button>);
-  
+
+
+
 
 
 
@@ -67,3 +68,21 @@ export const asDynamicVariables = () => {
  
   return <div>{content}</div>;
 };*/
+
+
+//couleur
+stories.add("couleur", () => {
+
+  const name = 'Color';
+  const defaultValue = "blue";
+  const groudpId = 'id';
+
+  const value =color(name, defaultValue, groudpId);
+
+  return value; 
+});
+
+
+
+export const primary = () => <Button  onClick={action('clic')}  title="Login"  backgroundColor="#1E6738" >bouton</Button>;
+
