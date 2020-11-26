@@ -3,9 +3,9 @@ import { action } from '@storybook/addon-actions';
 import { Button } from '@storybook/react/demo';
 
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean, number, color, backgroundColor} from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, number, color, table } from '@storybook/addon-knobs';
 
-import { GraphLine } from '../components/LineChart';
+import GraphLine from '../components/GraphLine';
 
 
 //ONGLET BUTTON
@@ -71,18 +71,30 @@ stories.add("couleur", () => {
   return value; 
 });
 
+/*
+const Graph = (args) => 
+
+  <GraphLine {...args} className="chart"/>; 
+  
+export const Graphique = Graph.bind({});
+Graphique.args = {
+  width:'400',
+  height:'500',
+};*/
+
+
+
 
 
 
 // ONGLET SECOND STORY
 const stories2 = storiesOf("2nd story", module);
+stories2.addDecorator(withKnobs);
 
+stories2.add("Histogram 1", () => (
 
+  <GraphLine  className="chart"/>
 
-stories2.add("Histogram 1", () => {
-
-  GraphLine();
-
-});
+));
 
 

@@ -1,24 +1,27 @@
 import React from 'react';
-import { Line } from 'react-chart-histogram';
+import Histogram from 'react-chart-histogram';
 
 function GraphLine() {      
 
-    const data = {                  //data contain all the data we gonna see on the line (legend)
-        labels: ['natation','course à pied','ping-pong'],      //Labels is an array  
-        datasets: [                 //Array of objects, each object corresponds to one line
-            {
-                labels: 'nbr d heures pratiquées',      //ce à quoi correspond l'histogramme    
-                data: [5, 6, 2]     //quantité selon cheque label (ici 'natation','course à pied','ping-pong')
-            }
-        ]                             
-
-    }
+    const labels = ['2017', '2018','2019','2020','2021','2022'];
+    const data = [50, 600, 200, 300, 100, 400];
+    const options = { fillColor: '#8D8DC5', strokeColor: '#FFFFFF'};
+    const width = '800';
+    const height= '400';
 
     return (
-        <div>
-            <Line data={data}></Line>
-        </div>
-    )
+    <div>
+      <Histogram
+        xLabels={labels}
+        yValues={data}
+        options={options}
+        width={width}
+        height={height}
+      />
+    </div>
+  );
 
 }
-    export default GraphLine;
+    export default GraphLine
+
+    

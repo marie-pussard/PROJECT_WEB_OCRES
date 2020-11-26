@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import GraphLine from './components/GraphLine';
 
 function App() {
   return (
@@ -16,9 +17,17 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
         </a>
       </header>
+
+    
+      <div className="App">
+        <div>
+          <GraphLine className="chart"/>
+        </div>
+      </div>
+
+
     </div>
   );
 }
