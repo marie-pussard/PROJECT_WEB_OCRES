@@ -5,7 +5,7 @@ import { Button } from '@storybook/react/demo';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean, number, color, backgroundColor} from '@storybook/addon-knobs';
 
-import { LineChart } from '../components/LineChart';
+import { GraphLine } from '../components/LineChart';
 
 
 //ONGLET BUTTON
@@ -81,7 +81,7 @@ const stories2 = storiesOf("2nd story", module);
 
 stories2.add("Histogram 1", () => {
 
-  LineChart();
+  GraphLine();
 
 });
 

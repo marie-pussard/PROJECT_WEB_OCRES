@@ -1,7 +1,7 @@
 import React from 'react';
 import { Line } from 'react-chart-histogram';
 
-function LineChart() {      
+function GraphLine() {      
 
     const data = {                  //data contain all the data we gonna see on the line (legend)
         labels: ['natation','course à pied','ping-pong'],      //Labels is an array  
@@ -21,4 +21,4 @@ function LineChart() {
     )
 
 }
-    export default LineChart;
+    export default GraphLine;
