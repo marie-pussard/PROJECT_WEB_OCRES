@@ -5,7 +5,7 @@ import { Button } from '@storybook/react/demo';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean, number, color, backgroundColor} from '@storybook/addon-knobs';
 
-import { button } from '@storybook/addon-knobs';
+import { LineChart } from '../components/LineChart';
 
 
 //ONGLET BUTTON
@@ -59,17 +59,6 @@ stories.add("variable dynamique", () => {
   return <div>{content}</div>;
 });
 
-/*
-//3rd element out the 1st story
-export const asDynamicVariables = () => {
-  const name = text('Name', 'x');
-  const age = number('Age', 0);
-  const content = `I am ${name} and I'm ${age} years old.`;
- 
-  return <div>{content}</div>;
-};*/
-
-
 //couleur
 stories.add("couleur", () => {
 
@@ -84,5 +73,16 @@ stories.add("couleur", () => {
 
 
 
-export const primary = () => <Button  onClick={action('clic')}  title="Login"  backgroundColor="#1E6738" >bouton</Button>;
+
+// ONGLET SECOND STORY
+const stories2 = storiesOf("2nd story", module);
+
+
+
+stories2.add("Histogram 1", () => {
+
+  LineChart();
+
+});
+
 
