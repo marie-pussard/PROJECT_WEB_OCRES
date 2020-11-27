@@ -8,6 +8,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import '../App.css';
 import GraphLine, { MyStockChart } from '../components/GraphLine';
+import Pie from '../components/Camembert';
 
 
 
@@ -28,7 +29,7 @@ Graphique.args = {
 const stories2 = storiesOf("2nd story", module);
 stories2.addDecorator(withKnobs);
 
-stories2.add("Histogram 1", () => (
+stories2.add("Graphe n°1 / Histogram", () => (
 
   <Histo className="chart"/>
 
@@ -37,9 +38,17 @@ stories2.add("Histogram 1", () => (
 
 
 
-//2nd histogramme
-stories2.add("Histogram 2", () => (
+//2nd graphe linéaire
+stories2.add("Graphe n°2 / GraphLine", () => (
 
     <GraphLine className="chart"/>
     
+));
+
+
+//3rd graphe camembert
+stories2.add("Graphe n°3 / Pie", () => (
+
+  <Pie className="chart"/>
+
 ));

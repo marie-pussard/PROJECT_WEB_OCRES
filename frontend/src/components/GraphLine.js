@@ -13,17 +13,23 @@ function GraphLine() {
         title: {
             text: 'nombre d heures de sport par semaine',
         },
-        subtitle: {
+        /*subtitle: {
             text: 'Click the columns to view versions.'
-        },
+        },*/
         xAxis: {
-            type: 'axe des abscisses'
+            type: 'category',
+
         },
+
         yAxis: {
             title: {
                 text: 'axe des ordonnées'
-            }
+            },
         },
+
+        tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+          },
 
         legend: {
             enabled: true
@@ -39,13 +45,52 @@ function GraphLine() {
             }
         },
 
-        
-        
+        tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}h'
+          },
+
         series: [
             {
-            name: "nbr d heures",
+            name: "nbr heures",
             colorByPoint: true, //couleur différente pour chaque point
-            data: [2, 4, 1, 3, 6, 4], 
+            data: [
+                {
+                    name: 'Lundi',
+                    y: 2,
+                    x: 1,
+                },
+                {
+                    name: 'Mardi',
+                    y: 4,
+                    x: 2,
+                },
+                {
+                    name: 'Mercredi',
+                    y: 3,
+                    x: 3,
+                },
+                {
+                    name: 'Jeudi',
+                    y: 5,
+                    x: 4,
+                },
+                {
+                    name: 'Vendredi',
+                    y: 2,
+                    x: 5,
+                },
+                {
+                    name: 'Samedi',
+                    y: 6,
+                    x: 6,
+                },
+                {
+                    name: 'Dimanche',
+                    y: 1,
+                    x: 7,
+                },
+            ], 
             }
         ],
     }
