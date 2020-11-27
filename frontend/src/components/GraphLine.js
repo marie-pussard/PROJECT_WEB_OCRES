@@ -1,27 +1,66 @@
 import React from 'react';
-import Histogram from 'react-chart-histogram';
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
+import '../App.css';
 
-function GraphLine() {      
 
-    const labels = ['2017', '2018','2019','2020','2021','2022'];
-    const data = [50, 600, 200, 300, 100, 400];
-    const options = { fillColor: '#8D8DC5', strokeColor: '#FFFFFF'};
-    const width = '800';
-    const height= '400';
+function GraphLine() {
+
+    const parameters = {
+        chart: {
+            type: 'line',
+        },
+        title: {
+            text: 'nombre d heures de sport par semaine',
+        },
+        subtitle: {
+            text: 'Click the columns to view versions.'
+        },
+        xAxis: {
+            type: 'axe des abscisses'
+        },
+        yAxis: {
+            title: {
+                text: 'axe des ordonnées'
+            }
+        },
+
+        legend: {
+            enabled: true
+        },
+        plotOptions: {
+            series: {
+                //pointPadding: 0.4,
+                //borderWidth: 0,
+                dataLabels: {
+                    enabled: true, //apparait au dessus du point
+                    format: '{point.y:.0f}h' //.0f = 0 chiffre après virgule
+                }                           //.1f = 1 ch après virgule
+            }
+        },
+
+        
+        
+        series: [
+            {
+            name: "nbr d heures",
+            colorByPoint: true, //couleur différente pour chaque point
+            data: [2, 4, 1, 3, 6, 4], 
+            }
+        ],
+    }
 
     return (
-    <div>
-      <Histogram
-        xLabels={labels}
-        yValues={data}
-        options={options}
-        width={width}
-        height={height}
-      />
-    </div>
-  );
+        <div>
+            <HighchartsReact 
+            highcharts={Highcharts}
+            options={parameters} />
 
-}
-    export default GraphLine
-
+        </div>
+        
+        );
     
+    }
+        export default GraphLine
+
+

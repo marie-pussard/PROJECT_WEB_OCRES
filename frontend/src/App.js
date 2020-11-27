@@ -3,6 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import GraphLine from './components/GraphLine';
 
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
+
+
+
 function App() {
   return (
     <div className="App">
@@ -20,16 +25,12 @@ function App() {
         </a>
       </header>
 
-    
-      <div className="App">
-        <div>
-          <GraphLine className="chart"/>
-        </div>
-      </div>
-
-
     </div>
   );
 }
 
 export default App;
+
+
+
+
