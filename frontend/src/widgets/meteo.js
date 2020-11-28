@@ -32,21 +32,13 @@ export class Meteo extends React.Component {
       const humidity = data.main.humidity;
       const icon = data.weather[0].icon;
       const windspeed = data.wind.speed;
-      /*const description = data.list[0].weather[0].description;
-      const temp = data.list[0].temp.day;
-      const icon = Meteo.getHTMLElementFromIcon(data.list[0].weather[0].icon);*/
-      // Modifier le DOM
-      /*in state schreiben*/
+      /*write information in state*/
       this.setState({today_forecast_main:main}); /* ? */
       this.setState({temperature});
       this.setState({icon});
       this.setState({windspeed});
       this.setState({humidity});
       console.log(main);
-      /*document.getElementById('today-forecast-main').innerHTML = main;
-      document.getElementById('today-forecast-more-info').innerHTML = description;
-      document.getElementById('icon-weather-container').innerHTML = icon;
-      document.getElementById('today-forecast-temp').innerHTML = `${temp}°C`;*/
   })
 }
   fetchTodayForecast(){
