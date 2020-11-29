@@ -29,7 +29,8 @@ Avant de lancer notre projet, assurez-vous d'avoir installer les dépendances su
 ### Organisation
 Pour nous organiser, nous avons mis en place un trello :
 <p align="left">
- <a href="https://trello.com/invite/b/fgPkbm50/3ee3087e685e3319e49c12d2f4d01c5a/front-end">Lien vers notre Trello</a>
+    <a href="https://trello.com/invite/b/fgPkbm50/3ee3087e685e3319e49c12d2f4d01c5a/front-end">
+    Lien vers notre Trello</a>
 </p>
 Nous y avons répertorié la majeure partie de notre bibliographie dans une des listes.
 Une autre nous a permis d'afficher nos idées.
@@ -50,16 +51,5 @@ La haute fidélité nous a permis de mieux concevoir l'ensemble du design de la 
 `Louis Roussel - TD2B`
 `Marie Pussard - TD2A`
 
-## Bibliographie
 
-<p align="left">
-<a href="https://storybook.js.org/docs/react/writing-stories/introduction">Référence n°1</a>
-<a href="https://www.uplabs.com/posts/oswald-dashboard-ui-kit">Référence n°2</a>
-<a href="https://github.com/reactchartjs/react-chartjs-2">Référence n°2</a>
-<a href="https://github.com/public-apis/public-apis">Référence n°2</a>
-<a href="https://developer.edamam.com/edamam-docs-nutrition-api">Référence n°2</a>
-<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Référence n°2</a>
-<a href="https://www.npmjs.com/package/@storybook/addon-knobs">Référence n°2</a>
-<a href=""></a>
-</p>
 
