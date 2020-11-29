@@ -28,7 +28,7 @@ Avant de lancer notre projet, assurez-vous d'avoir installer les dépendances su
 ## Documentation
 ### Organisation
 Pour nous organiser, nous avons mis en place un trello :
-<p align="center">
+<p align="left">
  <a href="https://trello.com/invite/b/fgPkbm50/3ee3087e685e3319e49c12d2f4d01c5a/front-end">Lien vers notre Trello</a>
 </p>
 Nous y avons répertorié la majeure partie de notre bibliographie dans une des listes.
@@ -39,13 +39,13 @@ Les trois autres listes sont les listes de base avec les tâches que l'on s'est 
 Pour les wireframes, nous avons choisi de les réaliser en haute fidélité et pour chacun des trois formats web, tablette et mobile. 
 La haute fidélité nous a permis de mieux concevoir l'ensemble du design de la page et de réfléchir à l'agencement des composants et aux fonctionnalités à insérer. 
 
-### Dfficultés rencontrées & éléments qui ne marchent pas
+### Difficultés rencontrées & éléments qui ne marchent pas
 
 
 
 
 
 ## Auteurs
-Jakob Zahler - TD2A
-Louis Roussel - TD2B
-Marie Pussard - TD2A
+`Jakob Zahler - TD2A`
+`Louis Roussel - TD2B`
+`Marie Pussard - TD2A`
