@@ -1,10 +1,11 @@
 import React from 'react';
 import Histogram from 'react-chart-histogram';
+import * as ReactDOM from "react-dom";
 
 function Histo() {      
 
-    const labels = ['2017', '2018','2019','2020','2021','2022'];
-    const data = [50, 600, 200, 300, 100, 400];
+    const labels = ['Lundi', 'Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
+    const data = [1, 0, 4, 0, 0,3,0];
     const options = { fillColor: '#8D8DC5', strokeColor: '#FFFFFF'};
     const width = '800';
     const height= '400';
