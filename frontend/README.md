@@ -1,13 +1,51 @@
 # Frontend
 
-Ce dossier contiendra la partie frontend de votre projet.
+Ce dossier contient la partie frontend de notre projet.
 
-Le frontend à été initalisé avec un create-react-app et sotrybook y est deja installé avec un exemple de stories que vous trouverez dans le repertoire `src/stories`.
+## Dashboard 
 
-Storybook est là pour vous aider à prototyper et documenter vos composants. Si nous n'arrivons pas à lancer votre projet, nous pourrons au moins regarder vos composants en fonctionnement.
+Notre projet consiste à aider les sportifs à visualiser l'ensemble de leurs performances. Ce tableau de bord permet aussi de les accompagner sur le côté nutritionnel en intégrant des statistiques sur leurs repas et un suivi de leur poids. Il affiche les données météo, la musique en cours de lecture et propose 3 idées de recette par jour pour motiver au maximum l'utilisateur et l'encourager dans son ou ses activités.
+Pour résumer :
+- Observer l'évolution de vos performances
+- Suiver votre alimentation
+-Rester motivé
+- Bouger
+
+## How to use ?
+### Download 
+
+Avant de lancer notre projet, assurez-vous d'avoir installer les dépendances suivantes :
+- npm i @storybook/addon-knobs
+- npm i highcharts highcharts-react-official
+
+### Lancer le projet
+
+
+
+
+
 
 ## Documentation
+### Organisation
+Pour nous organiser, nous avons mis en place un trello :
+<p align="center">
+ <a href="https://trello.com/invite/b/fgPkbm50/3ee3087e685e3319e49c12d2f4d01c5a/front-end">Lien vers notre Trello</a>
+</p>
+Nous y avons répertorié la majeure partie de notre bibliographie dans une des listes.
+Une autre nous a permis d'afficher nos idées.
+Les trois autres listes sont les listes de base avec les tâches que l'on s'est fixées, celles qui sont en cours et celles terminées. 
 
-Vous pourrez supprimer le contenu de ce README et vous l'approprier en y notant les éléments importants de votre projet. Il est très important de bien documenter un projet !
+### Wireframes
+Pour les wireframes, nous avons choisi de les réaliser en haute fidélité et pour chacun des trois formats web, tablette et mobile. 
+La haute fidélité nous a permis de mieux concevoir l'ensemble du design de la page et de réfléchir à l'agencement des composants et aux fonctionnalités à insérer. 
 
-Inspirez-vous des grands repos open sources qui existent sur github. Les informations qui reviennent souvent sont une description du projet (pourquoi, comment...), la maniere de lancer le projet et eventuellement d'y contribuer, une documentation sur des éléments que vous voulez mettre en avant et pour finir les noms des contributeurs.
+### Dfficultés rencontrées & éléments qui ne marchent pas
+
+
+
+
+
+## Auteurs
+Jakob Zahler - TD2A
+Louis Roussel - TD2B
+Marie Pussard - TD2A
