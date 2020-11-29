@@ -49,3 +49,17 @@ La haute fidélité nous a permis de mieux concevoir l'ensemble du design de la 
 `Jakob Zahler - TD2A`
 `Louis Roussel - TD2B`
 `Marie Pussard - TD2A`
+
+## Bibliographie
+
+<p align="left">
+<a href="https://storybook.js.org/docs/react/writing-stories/introduction"></a>
+<a href="https://www.uplabs.com/posts/oswald-dashboard-ui-kit"></a>
+<a href="https://github.com/reactchartjs/react-chartjs-2"></a>
+<a href="https://github.com/public-apis/public-apis"></a>
+<a href="https://developer.edamam.com/edamam-docs-nutrition-api"></a>
+<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"></a>
+<a href="https://www.npmjs.com/package/@storybook/addon-knobs"></a>
+<a href=""></a>
+</p>
+
