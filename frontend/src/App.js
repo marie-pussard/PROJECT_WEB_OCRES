@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import GraphLine from './components/GraphLine';
 import Histo from './components/Histo';
-import Highcharts from 'highcharts';
-import HighchartsReact from 'highcharts-react-official';
+
 import Pie from'./components/Camembert';
+import {Meteo} from './components/meteo';
+import { Recipe } from './components/recette';
+
 
 
 
@@ -23,16 +25,16 @@ function App() {
           </div>
           <div className="containergauchecentre">
             <div className="graph">
-            <GraphLine />
+            
             </div>
             <div className="graph">
-            <GraphLine />
+            < GraphLine />
             </div>
 
           </div>
           <div className="containergauchebas">
             <div className="graph">
-            <GraphLine />
+  
             </div>
             <div className="graph">
             < Pie />
@@ -40,9 +42,15 @@ function App() {
          </div>
         </div>
         <div className="ContainerDroite">
+        <div className="graph">
+            <Meteo />
+            </div>
+            <div className="graph">
+            
+            </div>
 
         </div>
-
+        <Recipe />
       </div>
 
     </div>
