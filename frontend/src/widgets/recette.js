@@ -20,14 +20,14 @@ export class Recipe extends React.Component {
     this.state = {
       activeRecipe: 0,
       recipes: [{
-        title: 'TestRezept',
+        title: 'Salade Fitness',
         image: 'http://www.galerie-imagine.fr/images/image-de-repas_3.jpg',
         calories: 800,
         protein: 60,
         fat: 300,
         sugar: 80,
       },{
-        title: 'TestRezept2',
+        title: 'Salade aux oeufs et tomates',
         image: 'http://www.galerie-imagine.fr/images/image-de-repas_9.jpg',
         calories: 700,
         protein: 80,
