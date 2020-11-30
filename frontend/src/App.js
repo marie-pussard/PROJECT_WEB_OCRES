@@ -20,39 +20,13 @@ function App() {
 
       <div className="containerDashboard">
         <div className="ContainerGauche">
-          <div className="Histo">
-            <Histo />
-          </div>
-          <div className="containergauchecentre">
-            <div className="graph">
-            
-            </div>
-            <div className="graph">
-            < GraphLine />
-            </div>
-
-          </div>
-          <div className="containergauchebas">
-            <div className="graph">
-  
-            </div>
-            <div className="graph">
-            < Pie />
-            </div>
-         </div>
-        </div>
-        <div className="ContainerDroite">
-        <div className="graph">
-            <Meteo />
-            </div>
-            <div className="graph">
-            
-            </div>
-
-        </div>
+        <Histo />
+        < GraphLine />
+        <Meteo />
         <Recipe />
+        </div>
       </div>
-
+         
     </div>
   );
 }
