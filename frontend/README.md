@@ -17,10 +17,16 @@ Pour résumer :
 Avant de lancer notre projet, assurez-vous d'avoir installer les dépendances suivantes :
 - npm i @storybook/addon-knobs
 - npm i highcharts highcharts-react-official
+- npm i axios
+- npm install react-scripts --save
+- npm install react-bootstrap bootstrap
+
 
 ### Lancer le projet
 
-
+1) Ouvrir le terminal
+2) Placez-vous dans le frontend : ("cd frontend")
+3) Lancer le projet avec la commande "npm start"
 
 
 
