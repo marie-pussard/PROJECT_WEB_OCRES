@@ -6,6 +6,10 @@ body {
 	background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
 }
 
+main {
+	min-height: 100vh;
+}
+
 /* Slideshow container */
 .slideshow-container {
 	max-width: 1000px;
@@ -130,3 +134,46 @@ body {
 	text-align: center;
 }
 
+.carousel .container {
+	height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+	align-content: space-between;
+	max-height: min-content;
+}
+
+.carousel-inner {
+	overflow: visible;
+}
+
+.recipe-img {
+	flex: 1 1 50%;
+	max-width: 50%;
+}
+
+.recipe-img img {
+	height: 100%;
+	width: auto;
+}
+
+.recipe-chart {
+	max-width: 50%;
+	flex: 1 1 50%;
+}
+
+.carousel .carousel-control-prev {
+	left: -50px;
+}
+.carousel .carousel-control-next {
+	right: -50px;
+}
+
+.carousel-caption {
+	bottom: -80px;
+}
+
+.carousel-indicators {
+	bottom: -90px;
+}

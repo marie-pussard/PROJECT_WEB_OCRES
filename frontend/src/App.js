@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {Meteo} from './widgets/meteo';
+// import {Meteo} from './widgets/meteo';
 import {Recipe} from './widgets/recette';
 
 class App extends React.Component {
