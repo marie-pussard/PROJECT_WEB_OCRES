@@ -14,7 +14,7 @@ function GraphLine() {
             Width: 50,
         },
         title: {
-            text: 'nombre d heures de sport par semaine',
+            text: 'Intensité',
         },
         /*subtitle: {
             text: 'Click the columns to view versions.'
@@ -39,7 +39,7 @@ function GraphLine() {
                 borderWidth: 0,
                 dataLabels: {
                     enabled: true, //apparait au dessus du point
-                    format: '{point.y:.0f}h' //.0f = 0 chiffre après virgule
+                    format: '{point.y:.0f}kcal' //.0f = 0 chiffre après virgule
                 }                           //.1f = 1 ch après virgule
             }
         },
@@ -56,27 +56,27 @@ function GraphLine() {
             data: [
                 {
                     name: 'Lundi',
-                    y: 2,
+                    y: 150,
                     x: 1,
                 },
                 {
                     name: 'Mardi',
-                    y: 4,
+                    y: 600,
                     x: 2,
                 },
                 {
                     name: 'Mercredi',
-                    y: 3,
+                    y: 900,
                     x: 3,
                 },
                 {
                     name: 'Jeudi',
-                    y: 5,
+                    y: 500,
                     x: 4,
                 },
                 {
                     name: 'Vendredi',
-                    y: 2,
+                    y: 200,
                     x: 5,
                 },
                 {
