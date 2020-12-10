@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.adminbutton {
+  width: 50%;
+  margin: auto;
+  align-items: right;
+}
+
+.row {
+  width: flex;
+  justify-content: center;
+}
+
+.column{
+  width: auto;
+  align-content: space-around;
+  margin: 10px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.savebutton {
+  display: flex;
+  justify-content: center;
+}

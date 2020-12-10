@@ -41,17 +41,24 @@
   
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
+    <!--<button id="adminbutton" class="btn btn-success" type="submit" onclick="">Admin</button>
     -->
+    <h1 class="text-center"> Veuillez rentrer les cases suivantes s'il vous plaît !</h1>
+    <div class="row text-center">
+    <div class="column text-left">
+        <p>Type de sport</p>
+        <p>Heures par sport</p>
+        <p>Heures de sport par semaine</p>
+        <p>votre poids</p>
+    </div>
+    <div class="column text-left">
+        <input class="text-center" id="InTypeSport" type="text" placeholder="Rentrer le type de sport">
+        <input class="text-center" id="Input" type="text" placeholder="Rentrer les heures par sport">
+        <input class="text-center" id="InHeuresSemaine" type="text" placeholder="Heures de sport par semaine">
+        <input class="text-center" id="InPoids" type="text" placeholder="Rentrer votre poids">
+    </div>
+  </div>
+      <button id="savebutton" class="btn-success savebutton" type="submit" onclick="">Save !</button>
   </body>
 </html>

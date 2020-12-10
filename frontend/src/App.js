@@ -13,7 +13,7 @@ class App extends React.Component {
     <div className="App">
       <main className="container">  
         {/* <Meteo/>*/}
-        <Recipe/>
+        {/*<Recipe/>*/}
       </main>
     </div>
   );
