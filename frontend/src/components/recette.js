@@ -1,4 +1,4 @@
-import './recette.css';
+
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import axios from "axios";
@@ -9,31 +9,43 @@ var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 
 const API_KEY = "afcaada881f54b3e87dac57c23cff390";
-const API_URL = "https://api.spoonacular.com/recipes/complexSearch";
+const API_URL = "https://api.spoonacular.com/recipes/random";
 //const API_URL = "https://api.spoonacular.com/recipes/716429/information";
 // const API_IMAGE_URL = "https://spoonacular.com/recipeImages/";
 
+//https://api.spoonacular.com/recipes/complexSearch
 
 export class Recipe extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       activeRecipe: 0,
-      recipes: [{
+      recipes: [
+        {
         title: 'Salade Fitness',
         image: 'http://www.galerie-imagine.fr/images/image-de-repas_3.jpg',
         calories: 800,
         protein: 60,
         fat: 300,
         sugar: 80,
-      },{
+        },
+        {
         title: 'Salade aux oeufs et tomates',
         image: 'http://www.galerie-imagine.fr/images/image-de-repas_9.jpg',
         calories: 700,
         protein: 80,
         fat: 360,
         sugar: 180,
-      }
+        },
+        {
+        title: '',
+        image: 'http://www.galerie-imagine.fr/images/image-de-repas_9.jpg',
+        calories: 700,
+        protein: 80,
+        fat: 360,
+        sugar: 180,
+        },
+
     ]
      }
     this.fetchRecipe = this.fetchRecipe.bind(this);
@@ -135,3 +147,5 @@ export class Recipe extends React.Component {
     )
   }
 }
+
+export default Recipe;

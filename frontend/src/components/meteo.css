@@ -1,103 +1,121 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
 
-body {
-	background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+/* PARTIE METEO */
+
+.container{
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	max-width: 300px;
+	max-height: 300px;
+	background-color: white;
+	box-shadow:  0px 2 10px -10px #000000;
+
 }
-#weather_wrapper{
-	width: 400px;
-	margin: 100px auto;
-}
-.weatherCard{
-	width: 400px;
-	height: 200px;
-	font-family: 'Open Sans';
-	position: relative;
-}
-.currentTemp{
-	width: 220px;
-	height: 200px;
-	background: rgb(41, 41, 41);
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-.currentWeather{
-	width: 180px;
-	height: 200px;
-	background: rgb(237, 237, 237);
-	margin: 0;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-.temp{
-	font-size: 80px;
-	text-align: center;
-	display: block;
-	font-weight: 300;
-	color: rgb(255, 255, 255);
-	padding: 20px 0 0;
-}
-.location{
-	color: rgb(255, 255, 255);
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 30px;
-	display: block;
-}
+
+
 .conditions{
-	font-family: weathericons;
-	font-size: 80px;
-	display: block;
-	padding: 0 0 0;
-	text-align: center;
-}
-.conditions img{
+	display: flex;
 	max-width: 100%;
-	margin-top: -10px;
+	max-height: 100%;
+	vertical-align: center;
+	align-items: center;
 }
-.info{
-	width: 180px;
-	height: 50px;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	background: rgb(42, 178, 234);
-	font-weight: 700;
-	color: rgb(255, 255, 255);
-	text-align: center;
+
+
+.temperature{
+	display: flex;
+	font-size: 40px;
+	justify-content: center;
+	font-weight: bold;
+	color: black;
+	padding: 10px 0 0;
 }
+
+
+.ville{
+	display: flex;
+	color: black;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20px;
+	justify-content: center;
+}
+
+
 .rain {
-	width: 50%;
-	position: absolute;
-	left: 10px;
-	word-spacing: 60px;
-	top: 3px;
+	display: flex;
+	font-weight: bold;
+	justify-content: center;
+	vertical-align: center;
+	font-size: 15px;
 }
+
+
 .rain::before{
-	display: block;
+	display: flex;
 	content: '\f04e';
 	font-family: weathericons;
-	font-size: 40px;
-	left: 6px;
-	top: -4px;
-	position: absolute;
+	font-size: 30px;
+	margin-right: 0.5em;
 }
+
+
 .wind {
-	width: 50%;
-	right: -10px;
-	position: absolute;
-	word-spacing: 60px;
-	top: 3px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+	font-size: 15px;
 }
+
+
 .wind::before{
-	display: block;
+	display: flex;
 	content: '\f050';
 	font-family: weathericons;
-	font-size: 25px;
-	left: -10px;
-	position: absolute;
-	top: 5px;
+	font-size: 20px;
+	margin-right: 0.5em;
 }
+
+
+/* PARTIE RECETTE */
+
+.conteneur {
+    border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	background-color: #707070;
+	max-width: 300px;
+	max-height: 300px;
+	min-width: 250px;
+	min-height: 250px;
+}
+
+
+.image {
+    display: flex;
+	max-width: 200px;
+	max-height: 200px;
+	border: 5px;
+	border-color: #3b3b3b;
+	margin-top: 0.5em;
+	margin-bottom: 1.5em;
+    
+}
+
+
+.text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 0.5em;
+    color: White;
+  }
+
+.contenu {
+	display: flex;
+	justify-content: center;
+}
+  

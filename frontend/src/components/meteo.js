@@ -1,6 +1,7 @@
 import './meteo.css';
 import React from 'react';
 import axios from "axios";
+import './meteo.css';
 
 // Clé api
 const API_KEY = "4081444b7b90198136fefe6ed4ccf35b";
@@ -39,8 +40,8 @@ export class Meteo extends React.Component {
       this.setState({windspeed});
       this.setState({humidity});
       console.log(main);
-  })
-}
+    })
+  }
   fetchTodayForecast(){
     return axios
     .get(`${API_URL}?q=${this.state.city}&cnt=4&units=metric&appid=${API_KEY}`, {
@@ -55,21 +56,37 @@ export class Meteo extends React.Component {
 
   render(){
     return(
-      <div id="weather_wrapper">
-	<div className="weatherCard">
-		<div className="currentTemp">
-			<span className="temp">{Math.round(this.state.temperature)}&deg;</span>
-			<span className="location">{this.state.city}</span>
-		</div>
-		<div className="currentWeather">
-			<span className="conditions"><img src={`http://openweathermap.org/img/wn/${this.state.icon}@4x.png`}></img></span>
-			<div className="info">
-				<span className="rain">{this.state.humidity} %</span>
-				<span className="wind">{this.state.windspeed} Mph</span>
-			</div>
-		</div>
-	</div>
-</div>
+
+      <div className="container" >
+        <div className="row">
+          <div className="col-6">
+            <img className="conditions" src={`http://openweathermap.org/img/wn/${this.state.icon}@4x.png`}></img>
+          </div>
+
+          <div className="col-6">
+            <div className="row temperature">
+              <span>{Math.round(this.state.temperature)}&deg;</span>
+            </div>
+
+            <div className="row ville">
+              <span>{this.state.city}</span>
+            </div> 
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-6 wind">
+            <span>{this.state.windspeed} Mph</span>
+          </div>
+
+          <div className="col-6 rain">
+            <span>{this.state.humidity} %</span>
+          </div>
+        </div>
+      </div>
+
+      
     )
   }
 }
+export default Meteo;

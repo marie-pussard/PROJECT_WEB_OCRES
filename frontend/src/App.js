@@ -1,6 +1,28 @@
 import React from 'react';
-
+import logo from './logo.svg';
 import './App.css';
+<<<<<<< Updated upstream
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+=======
+
 import GraphLine from './components/GraphLine';
 import Histo from './components/Histo';
 
@@ -13,26 +35,12 @@ import { Recipe } from './components/recette';
 
 function App() {
   return (
-    <div className="container">
-      <div className="titre">
-        <h1 id="Titre">Dashboard</h1> 
-      </div>
 
-      <div className="containerDashboard">
-        <div className="ContainerGauche">
-        <Histo />
-        < GraphLine />
-        <Meteo />
-        <Recipe />
-        </div>
-      </div>
-         
-    </div>
+    <></>
+
+
+>>>>>>> Stashed changes
   );
 }
 
 export default App;
-
-
-
-
