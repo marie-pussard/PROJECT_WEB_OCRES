@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: flex;
+  justify-content: center;
 }
 
 code {
@@ -12,10 +14,17 @@ code {
     monospace;
 }
 
+.heading{
+  display: flex;
+  margin-top: 1em;
+  justify-content: center;
+
+}
 .adminbutton {
-  width: 50%;
+  display: flex;
   margin: auto;
-  align-items: right;
+  margin-top: 150px;
+  justify-content: space-around;
 }
 
 .row {
@@ -31,4 +40,3 @@ code {
   display: flex;
   flex-direction: column;
 }
-
