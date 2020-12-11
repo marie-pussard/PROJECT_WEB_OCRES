@@ -12,12 +12,16 @@ const axios = require('axios');
 function App() {
   const [showAdmin, setAdmin] = useState(false);
   const [sexe, setSexe] = useState();
+  const [weight, setWeight] = useState();
+  const [sporttype, setSporttype] = useState();
+  const [hoursSporttype, sethoursSporttype] = useState();
+  const [daysPerWeek, setdaysPerWeek] = useState();
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     event.preventDefault();
     event.stopPropagation();
-    axios.post('/form-submit', { sexe}) //weight, sporttype, hoursSporttype, daysPerWeek 
+    axios.post('/form-submit', { sexe, weight, sporttype, hoursSporttype, daysPerWeek }) //weight, sporttype, hoursSporttype, daysPerWeek 
     .then(function (response) {
       console.log(response);
     })
@@ -26,8 +30,23 @@ function App() {
     });
   };
 
+  //function handleValueChanges(e){
+   // set.Value[](e.target.value);
+  //}
   function handleSexeChange(e){
     setSexe(e.target.value);
+  }
+  function handleWeightChange(e){
+    setWeight(e.target.value);
+  }
+  function handleSporttypeChange(e){
+    setSporttype(e.target.value);
+  }
+  function handlehoursSporttypeChange(e){
+    sethoursSporttype(e.target.value);
+  }
+  function handledaysPerWeekChange(e){
+    setdaysPerWeek(e.target.value);
   }
 
   return (
@@ -61,22 +80,37 @@ function App() {
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="formBasicWeight">
               <Form.Label>Your weight</Form.Label>
-              <Form.Control type="number" placeholder="Your weight" />
+              <Form.Control 
+                type="number" 
+                placeholder="Your weight"
+                onChange={handleWeightChange}
+              />
               <Form.Text className="text-muted">
               </Form.Text>
               <Form.Check label="Share this data with third parties."/>
             </Form.Group>
             <Form.Group controlId="formBasicSporttype">
               <Form.Label>Sporttype</Form.Label>
-              <Form.Control type="text" placeholder="Sporttype" />
+              <Form.Control 
+                type="text" 
+                placeholder="Sporttype"
+                onChange={handleSporttypeChange}
+              />
             </Form.Group>
             <Form.Group controlId="formBasicSporttype">
               <Form.Label>How many hours you practiced this sporttype?</Form.Label>
-              <Form.Control type="number" placeholder="Hours per Sporttype" />
+              <Form.Control 
+                type="number" 
+                placeholder="Hours per Sporttype"
+                onChange={handlehoursSporttypeChange}
+              />
             </Form.Group>
             <Form.Group controlId="formBasicSporttype">
               <Form.Label>How many days you practiced per week?</Form.Label>
-              <Form.Control type="number" placeholder="Days per week" />
+              <Form.Control 
+                type="number" 
+                placeholder="Days per week" 
+                onChange={handledaysPerWeekChange}/>
             </Form.Group>
             <Button variant="primary" type="submit">
               Submit
