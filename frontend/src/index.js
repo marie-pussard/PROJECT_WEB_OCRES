@@ -4,17 +4,20 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import GraphLine from './components/GraphLine';
 import Graph1 from './components/Graph1';
+import Graph2 from './components/Graph2';
 import Meteo from './components/meteo';
 import Food from './components/food';
 
 
 
+ReactDOM.render(<Graph1 />, document.getElementById('graph1'));
+ReactDOM.render(<Graph2 />, document.getElementById('graph2'));
+ReactDOM.render(<GraphLine />, document.getElementById('graph3'));
+ReactDOM.render(<GraphLine />, document.getElementById('graph4'));
+ReactDOM.render(<GraphLine />, document.getElementById('graph5'));
 
-ReactDOM.render(<GraphLine />, document.getElementById('root'));
 ReactDOM.render(<Meteo />, document.getElementById('meteo'));
 
-ReactDOM.render(<GraphLine />, document.getElementById('root3'));
-ReactDOM.render(<Graph1 />, document.getElementById('root2'));
 ReactDOM.render(<Food/>, document.getElementById('carousel'));
 
 

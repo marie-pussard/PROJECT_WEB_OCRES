@@ -35,7 +35,7 @@ fetchTodayForecast(){
 
 render(){
     return(
-        <div className="container conteneur">
+        <div className="container couleurFond">
             <div className="row text">
                 <h3>Idées de recettes</h3>
             </div>
