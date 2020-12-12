@@ -9,7 +9,7 @@ class Graph1 extends React.Component {
     this.state = {
         
         chart: {
-            type: 'line',
+            type: 'column',
             Width: 50,
         },
 

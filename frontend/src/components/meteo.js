@@ -60,7 +60,7 @@ export class Meteo extends React.Component {
       <div className="container col-md-4 col-sm-3" >
         <div className="row">
           <div className="col-6">
-            <img className="conditions" src={`http://openweathermap.org/img/wn/${this.state.icon}@4x.png`}></img>
+            <img className="conditions" alt="" src={`http://openweathermap.org/img/wn/${this.state.icon}@4x.png`}></img>
           </div>
 
           <div className="col-6">

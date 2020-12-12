@@ -1,151 +1,93 @@
-
+/*
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import axios from "axios";
 import CanvasJSReact from '../canvasjs.react';
+import './meteo.css';
+
+import Slide2 from './slide';
+import Food from './slide';
+
 //var CanvasJSReact = require('./canvasjs.react');
 // var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 
-const API_KEY = "afcaada881f54b3e87dac57c23cff390";
-const API_URL = "https://api.spoonacular.com/recipes/random";
-//const API_URL = "https://api.spoonacular.com/recipes/716429/information";
-// const API_IMAGE_URL = "https://spoonacular.com/recipeImages/";
-
-//https://api.spoonacular.com/recipes/complexSearch
+const API_URL = "https://foodish-api.herokuapp.com/api/";
 
 export class Recipe extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeRecipe: 0,
-      recipes: [
-        {
-        title: 'Salade Fitness',
-        image: 'http://www.galerie-imagine.fr/images/image-de-repas_3.jpg',
-        calories: 800,
-        protein: 60,
-        fat: 300,
-        sugar: 80,
-        },
-        {
-        title: 'Salade aux oeufs et tomates',
-        image: 'http://www.galerie-imagine.fr/images/image-de-repas_9.jpg',
-        calories: 700,
-        protein: 80,
-        fat: 360,
-        sugar: 180,
-        },
-        {
-        title: '',
-        image: 'http://www.galerie-imagine.fr/images/image-de-repas_9.jpg',
-        calories: 700,
-        protein: 80,
-        fat: 360,
-        sugar: 180,
-        },
-
-    ]
-     }
-    this.fetchRecipe = this.fetchRecipe.bind(this);
-    this.handleSelect = this.handleSelect.bind(this);
-  }
-
-  writeRecipesToState(result){
-    const newRecipe = {
-      title: result.title,
-      image: result.image,
-      calories: result.nutrition.nutrients[0].amount,
-      protein: result.nutrition.nutrients[1].amount,
-      fat: result.nutrition.nutrients[2].amount,
-      sugar: result.nutrition.nutrients[3].amount,
+      image: '',
     }
-    this.setState({
-      recipes: [
-        ...this.state.recipes,
-        newRecipe
-      ]
-    })
+    this.fetchTodayForecast = this.fetchTodayForecast.bind(this);
   }
 
   componentDidMount(){
-    this.fetchRecipe()
+    this.fetchTodayForecast()
     .then((response) => {
       // Récupère la donnée d'une API
       const data = response.data;
-      console.log(data);
-
-      for(const result in data.results) {
-        this.writeRecipesToState(result);
-      }
-      console.log(this.state);
+      // On récupère l'information principal
+      const slide1 = data.image;
+      const slide2 = data.image;
+      const slide3 = data.image;
+      
+      /*write information in state*/
+      /*
+      this.setState({slide1});
+      this.setState({slide2});
+      this.setState({slide3});
+      //Affiche de l'url dans la console
+      console.log(slide1);
+      console.log(slide2);
+      console.log(slide3);
   })
-  .catch(console.error);
-}
-  fetchRecipe(){
+}*/
+
+/*
+  fetchTodayForecast(){
     return axios
-    //assemble API with Key and set nutrition parameters
-   // .get(`${API_URL}?apiKey=${API_KEY}&includeNutrition=true`, {
-      .get(`${API_URL}?apiKey=${API_KEY}&maxFat=25&maxSugar=30&minProtein=25&maxCalories=600&number=3`, {
-      crossdomain: true
+    .get(`${API_URL}?q=${this.state}`, {
+        crossdomain: true
     })
   }
 
-  getHTMLElementFromImage(image){
-    //return `<img src=${API_IMAGE_URL}${recipeID}-312x231@2x.jpg class="weather-icon"/>`
-  }
-  
-  handleSelect(activeRecipe, e) {
-    this.setState({activeRecipe});
-  };
-
   render(){
     return (
-      <div>
-      <Carousel activeIndex={this.state.activeRecipe} onSelect={this.handleSelect}>
-      {this.state.recipes.map((recipe, index) => {
-        const options = {
-          // title: {
-          //   text: "Basic Column Chart in React"
-          // },
-          data: [{				
-            type: "pie",
-            startAngle: 240,
-            yValueFormatString: "##0.0\"g\"",
-            indexLabel: "{label} {y}",
-            dataPoints: [
-              {y: recipe.protein, label: "Protéines"},
-              {y: recipe.fat, label: "Gras"},
-              {y: recipe.sugar, label: "Sucre"},
-            ]
-           }]
-          }
-        return (
-        <Carousel.Item key={recipe.title}>
-          <div className="d-flex flex-row container">
-            <div className="recipe-img">
-              <img
-                  src={recipe.image}
-                  alt={recipe.title}
-                />
-            </div>
-            
-            <div className="recipe-chart">
-              <CanvasJSChart options = {options}></CanvasJSChart>
-            </div>
+      <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+        <ol className="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img className="d-block w-100 image" alt="1 slide" src={`${this.state.slide1}`}></img>
           </div>
-         
-          <Carousel.Caption>
-            <h3>{recipe.title}</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-      )}
-      )}
-      </Carousel>
-    </div> 
+          <div className="carousel-item">
+            <Slide2></Slide2>
+          </div>
+          <div className="carousel-item">
+            <Food></Food>
+          </div>
+        </div>
+        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="sr-only">Previous</span>
+        </a>
+        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="sr-only">Next</span>
+        </a>
+      </div>
+
     )
   }
 }
 
-export default Recipe;
+  export default Recipe;
+
+
+
+*/
