@@ -1,13 +1,10 @@
 
 import React from 'react';
-import CanvasJSReact from '../canvasjs.react';
 import './meteo.css';
 
 import Slide1 from './slide';
 import Slide2 from './slide';
 import Slide3 from './slide';
-
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 
 class Carousel extends React.Component {

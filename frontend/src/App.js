@@ -1,45 +1,86 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-<<<<<<< Updated upstream
+import './index.css';
+import Graph1 from './components/Graph1';
+import Graph2 from './components/Graph2';
+import Graph3 from './components/Graph3';
+import Graph4 from './components/Graph4';
+import Graph5 from './components/Graph5';
+import Meteo from './components/meteo';
+import Carousel from './components/carousel';
+import Function from './components/function'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header className="header" id="bjr">
+        <div className="row pomme">
+            <div className="col-10">Dashboard</div>
+            <div className="col-2">
+            <button onClick={(e) => window.screen.}>Supprimer la ligne</button>
+                <img alt="" src="icon.png" class="icon"/>
+              
+            </div>
+        </div>
       </header>
-    </div>
-=======
 
-import GraphLine from './components/GraphLine';
-import Histo from './components/Histo';
+      <div className="row" >
+        <div className="col-sm-12 col-md-12 col-lg-9 linear-gradient">
+          
+          <div className="row graph">
+            <div className="col-xs-12 col-sm-9 graph">
+              <Graph1></Graph1>
+            </div>
+          </div>
 
-import Pie from'./components/Camembert';
-import {Meteo} from './components/meteo';
-import { Recipe } from './components/recette';
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 graph">
+              <Graph2></Graph2>
+            </div>
+
+            <div className="col-xs-12 col-sm-6 graph">
+              <Graph3></Graph3>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 graph">
+              <Graph4></Graph4>
+            </div>
+
+            <div className="col-xs-12 col-sm-6 graph">
+              <Graph5></Graph5>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="col-sm-12 col-md-12 col-lg-3 backColor">
+          <div className="row graph">
+            <Meteo className="meteo"></Meteo>
+          </div>
+
+          <div className="row graph">
+            
+            GRAPHE MUSIQUE
+            
+          </div>
+
+          <div className="row graph">
+            <Carousel></Carousel>      
+          </div>
+        </div>
+      </div>
+
+      <footer className="footer">
+
+      </footer>
+  
+
+  </>
 
 
-
-
-function App() {
-  return (
-
-    <></>
-
-
->>>>>>> Stashed changes
   );
 }
 
