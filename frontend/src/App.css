@@ -2,8 +2,10 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+
+body {
+  /*background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);*/
+  background: whitesmoke;
 }
 
 .App-header {
@@ -15,8 +17,41 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} 
+
+ .App-link {
+  color: #09d3ac;
+} 
+
+ .titre {
+  display: flex;
+  text-align: center;
+  background-color: #9BCEF6;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  color: black;
+  box-shadow: 0px 0px 10px  #000000;
+} 
+
+.titel{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+
 }
 
-.App-link {
-  color: #09d3ac;
+.buttonsize{
+  min-width: 100px;
 }
+
+.container{
+  max-width:90%;
+
+} 

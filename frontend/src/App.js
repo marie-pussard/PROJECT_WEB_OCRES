@@ -4,8 +4,18 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-// import {Meteo} from './widgets/meteo';
-// import {Recipe} from './widgets/recette';
+//import {Meteo} from './widgets/meteo';
+//import {Recipe} from './widgets/recette';
+import './index.css';
+import Graph1 from './components/Graph1';
+import Graph2 from './components/Graph2';
+import Graph3 from './components/Graph3';
+import Graph4 from './components/Graph4';
+import Graph5 from './components/Graph5';
+import Meteo from './components/meteo';
+import Carousel from './components/carousel';
+import Recipe from './components/recette';
+import Function from './components/function'
 
 const axios = require('axios');
 
@@ -55,13 +65,16 @@ function App() {
   return (
     <div>
       <Navbar bg="dark" expand="lg">
-        <Button className="m-2" onClick={() => setAdmin(!showAdmin)}>
-          {showAdmin ? 'Back' : 'Login'}
-        </Button>
-        {//{showAdmin ?  <h3>    Please fill in the following form !</h3> : <p1></p1>}
-        }   
+        
+          <Button className="m-2 col-1 buttonsize" onClick={() => setAdmin(!showAdmin)}>
+            {showAdmin ? 'Back' : 'Login'}
+          </Button>
+          {//{showAdmin ?  <h3>    Please fill in the following form !</h3> : <p1></p1>}
+          }   
+          <h3 className="titel col-11">Sport TECH</h3>
+      
       </Navbar>
-      <div className="container mt-5">
+      <div className="container mt-5"></div>
       {showAdmin ?
       <div>
         <h3>Please fill in the following form.</h3>
@@ -121,15 +134,75 @@ function App() {
           </Form>
           </div>
           :
-          <Jumbotron>
+          <div> 
+          <header className="header" id="bjr">
+            <div className="row pomme">
+              <h1 className="col-10">Dashboard</h1>
+                <div className="col-2">
+                  {/* <button onClick={(e) => window.screen.}>Supprimer la ligne</button> */}
+                  {/* <img alt="" src="icon.png" class="icon"/> */}
+                </div>
+            </div>
+          </header>
+
+          <div className="row" >
+            <div className="col-sm-12 col-md-12 col-lg-9 linear-gradient">
+              
+              <div className="row graph">
+                <div className="col-xs-12 col-sm-9 graph">
+                  <Graph1></Graph1>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-xs-12 col-sm-6 graph">
+                  <Graph2></Graph2>
+                </div>
+
+                <div className="col-xs-12 col-sm-6 graph">
+                  <Graph3></Graph3>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-xs-12 col-sm-6 graph">
+                  <Graph4></Graph4>
+                </div>
+
+                <div className="col-xs-12 col-sm-6 graph">
+                  <Graph5></Graph5>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="col-sm-12 col-md-12 col-lg-3 backColor">
+              <div className="row graph">
+                <Meteo className="meteo"></Meteo>
+              </div>
+
+              <div className="row graph">
+                
+                GRAPHE MUSIQUE
+                
+              </div>
+
+              <div className="row graph">
+                <Carousel></Carousel>      
+              </div>
+            </div>
+          </div>
+
+          {/* <Jumbotron>
             <h1>Welcome</h1>
             <p>
               To use this site as an Admin, please log in by using the button in the top left corner.
             </p>
-          </Jumbotron>
+          </Jumbotron>*/}
+          </div>
       }
       </div>
-    </div>
+    
   );
 }
 

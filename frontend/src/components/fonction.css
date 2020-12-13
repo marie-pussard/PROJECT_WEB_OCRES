@@ -1,0 +1,13 @@
+.fixe{
+    position: relative;
+}
+
+#fermer {
+    border-radius: 100%;
+}
+
+#bouton {
+    display: flex;
+    float: right;
+}
+
