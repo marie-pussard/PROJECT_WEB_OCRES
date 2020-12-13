@@ -30,14 +30,17 @@ function App() {
     });
   };
 
-  //function handleValueChanges(e){
-   // set.Value[](e.target.value);
+  const value = ["sexe", "weight", "sporttype", "hoursSporttype", "daysPerWeek"];
+  //function handleValueChange(e){
+  //  setWeight.Value[2](e.target.value);
   //}
+
   function handleSexeChange(e){
     setSexe(e.target.value);
   }
   function handleWeightChange(e){
     setWeight(e.target.value);
+    //set.value[1](e.target.value);
   }
   function handleSporttypeChange(e){
     setSporttype(e.target.value);
