@@ -8,22 +8,27 @@ import Graph4 from './components/Graph4';
 import Graph5 from './components/Graph5';
 import Meteo from './components/meteo';
 import Carousel from './components/carousel';
-import Function from './components/function'
+
+import './components/fonction.css';
+import Test, { Aled } from './components/fonction';
+
+
 
 
 function App() {
   return (
     <>
-      <header className="header" id="bjr">
+      <header className="header">
         <div className="row pomme">
             <div className="col-10">Dashboard</div>
             <div className="col-2">
-            <button onClick={(e) => window.screen.}>Supprimer la ligne</button>
+              <button id="b" onClick={()=>Aled()}>
                 <img alt="" src="icon.png" class="icon"/>
-              
+              </button>
             </div>
         </div>
       </header>
+
 
       <div className="row" >
         <div className="col-sm-12 col-md-12 col-lg-9 linear-gradient">
