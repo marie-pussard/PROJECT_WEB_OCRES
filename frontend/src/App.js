@@ -18,7 +18,7 @@ function App() {
         <div className="row pomme">
             <div className="col-10">Dashboard</div>
             <div className="col-2">
-            <button onClick={(e) => window.screen.}>Supprimer la ligne</button>
+            <button onClick={(e) => window.screen}>Supprimer la ligne</button>
                 <img alt="" src="icon.png" class="icon"/>
               
             </div>
