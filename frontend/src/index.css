@@ -13,6 +13,28 @@
 
 }
 
+/*#display {
+  padding-left: 1em;
+}*/
+
+#pop {
+  display: none;
+  color: #000000;
+  position: relative;
+  top : 50px;
+  left: 50px;
+}
+
+
+#button{
+  float: left;
+  background: #000000;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  color: white;
+}
+
 .pomme {
   margin-right: 0px;
   margin-left: 15px;
@@ -53,6 +75,7 @@
   justify-content: center;
   text-align: center;
   padding: 1em;
+  padding-left: 1em;
 
 }
 
