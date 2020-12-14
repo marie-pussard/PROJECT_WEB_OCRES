@@ -12,20 +12,13 @@ router.route('/:type').get((req, res) => {
       .catch(err => res.status(400).json('Error: ' + err));
   });
 
-  router.get('/graphe1', (req,res) => {
-    graphs.aggregate([
-        {$match: {
-            $and : [
-                { Type: 1},
-                { username: 'hello'}
-            ]
-        }},
-        {$sort: {Vitesse_moy: -1}},
-        {$limit: 1},
-    ])
-    .then(activities => res.json(activities))
+  router.get('/graphun',(req,res) => {
+    console.log(firstdayoftheweek);
+    Activity.find().where( { type: {$eq: 1, $eq: 1}})
+    .then(graphs => res.json(graphs))
     .catch(err => res.status(400).json('Error: ' + err));
-})
+});
+
 
 router.route('/add').post((req, res) => {
   const username = req.body.username;
